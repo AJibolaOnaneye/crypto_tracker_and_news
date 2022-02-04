@@ -1,0 +1,145 @@
+.coin-container {
+    max-width: 1250px;
+    margin: 1rem auto;
+    padding: 2.5rem 1rem;
+    /* padding: .7rem 1rem;
+    display: flex;
+    flex-direction: column; */
+    background-color: #26272b;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 8px;
+}
+
+.content {
+     padding: .7rem 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 2rem;
+}
+
+.info .coin-heading {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    justify-content: flex-start;
+}
+
+.coin-image {
+    margin-right: 1rem;
+}
+
+.coin-name-sub {
+   display: inline-block;
+   flex-direction: column;
+}
+
+.coin-name-p {
+    margin-bottom: -1rem;
+}
+
+.info .coin-price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header_container {
+    display: flex;
+   justify-content: center;
+}
+
+.rank {
+    margin: auto 1.5rem;
+}
+
+/* .rank-btn {
+    border: 1px solid #6900ff;
+    box-shadow: 0px 0px 8px #6900ff;
+    background-color: #6900ff;
+    border-radius: 8px;
+    padding: .2rem;
+} */
+
+
+.rank-btn {
+    border: solid 1px transparent;
+    padding: .3rem;
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    border-style: solid;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(to bottom, rgba(18, 106, 239, 1), rgba(136, 38, 170, 1));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    box-shadow: 2px 1000px 1px #000 inset;
+    border-radius: 7px;
+    font-size: 14px;
+    /* cursor: pointer; */
+}
+
+
+table {
+    margin: .5rem 0;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+.table-container {
+    max-width: 1200px;
+    margin: 1rem;
+    padding: .7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #26272b; */
+    /* box-shadow: 0px 0px 12px #18191b; */
+    /* border-radius: 8px; */
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.stats .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #808080;
+    margin: .6rem 0;
+    padding-bottom: .5rem;
+}
+
+.stats .row p:first-child {
+    color: #d3d3d3;
+}
+
+.about h3 {
+    margin: 1rem 0;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.green {
+    color: #32d800;
+}

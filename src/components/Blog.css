@@ -72,11 +72,12 @@
 }
 
 
-.pagination {
+/* .pagination {
     display: flex;
+    
     align-items: center;
     justify-content: center;
-}
+} */
 
 .paginationBttns {
     width: 80%;
@@ -120,3 +121,11 @@
     /* background-color: grey; */
   }
   
+
+  @media screen and (max-width: 720px) {
+   .pagination .paginationBttns a {
+        padding: 5px;
+        margin: 3px;
+      }
+  
+}

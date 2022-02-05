@@ -54,8 +54,14 @@
 
 
 
+
+
 @media screen and (max-width: 720px) {
     .hide-mobile {
         display: none;
+    }
+
+    .paginationBttns a{
+        margin: 15px;
     }
 }

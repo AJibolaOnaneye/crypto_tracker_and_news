@@ -1,12 +1,26 @@
 .about-container {
     max-width: 1000px;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 10rem auto;
     justify-content: center;
+  
 }
 
 h2 {
 text-align: justify;
 margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+    .about-container {
+       max-width: 650px;
+       margin: 2rem 1.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
 }

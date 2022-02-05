@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import  Logo  from '../assets/Dc-logo.png';
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import './Footer.css'
 
 const Footer = () => {
@@ -21,7 +22,8 @@ const Footer = () => {
               target='_blank'
               aria-label='Facebook'
             >
-              <i className='fab fa-facebook-f' />
+              {/* <i className='fab fa-facebook-f' /> */}
+              <FaFacebookF />
             </Link>
             <Link
               className='social-icon-link instagram'
@@ -29,7 +31,8 @@ const Footer = () => {
               target='_blank'
               aria-label='Instagram'
             >
-              <i className='fab fa-instagram' />
+              {/* <i className='fab fa-instagram' /> */}
+              <FaInstagram />
             </Link>
             {/* <Link
               className='social-icon-link youtube'
@@ -45,7 +48,8 @@ const Footer = () => {
               target='_blank'
               aria-label='Twitter'
             >
-              <i className='fab fa-twitter' />
+              {/* <i className='fab fa-twitter' /> */}
+              <FaTwitter />
             </Link>
             {/* <Link
               className='social-icon-link twitter'

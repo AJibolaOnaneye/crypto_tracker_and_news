@@ -37,8 +37,7 @@ const CoinInfo = () => {
 }, [url])
 
 
-  return <div>
-      <div className='coin-container'>
+    return ( <div className='coin-container'>
     <div className="content">
 
       <div className='header_container'>
@@ -145,9 +144,9 @@ const CoinInfo = () => {
       
   </div>
 
-{/* <Footer/> */}
+)
 
-  </div>
+
 };
 
 export default CoinInfo;

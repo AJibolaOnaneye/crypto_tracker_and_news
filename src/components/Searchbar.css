@@ -1,0 +1,38 @@
+.search-container{
+  max-width: 1100px;
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* width: 100%; */
+}
+
+.coin_search {
+    align-items: center;
+  }
+  
+  .coin_input {
+    background: #222531;
+    border: none;
+    padding: 16px;
+    border-radius: 4px;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .coin_input::placeholder {
+    color: #e2e2e2;
+  }
+
+  @media screen and (max-width:800px) {
+.search-container{
+  width: 100%;
+}
+
+.coin_search{
+  margin-right: 1rem;
+}
+    
+}

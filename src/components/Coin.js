@@ -4,24 +4,43 @@ import ReactPaginate from 'react-paginate';
 import CoinItems from './CoinItems';
 import { Link } from 'react-router-dom';
 import CoinInfo from '../route/CoinInfo';
+import Searchbar from './SearchBar'
 import './Coin.css';
 
+
 const Coin = () => {
-  const [coin, setCoin] = useState([]);
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(0)
   const [postPerPage] = useState(50)
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=300&page=1&sparkline=false`
 
   useEffect(() => {
     axios.get(url).then(res => {
-        setCoin(res.data)
+        setCoins(res.data)
         console.log(res.data);
     }).catch(error => console.log(error))
 }, [url])
 
+const allCoins = coins.filter(coin =>  {
+  if(search === "") {
+    return coin;
+  } else if( coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase()) ){
+    return coin;
+  } return null
+  // eslint-disable-next-line
+}
+);
+
+const handleChange = e => {
+  e.preventDefault();
+
+  setSearch(e.target.value.toLowerCase());
+};
+
     //Get Current page
     const indexOfLastPost = currentPage * postPerPage;
-    const currentPost = coin
+    const currentPost = coins && allCoins
     .slice(indexOfLastPost, indexOfLastPost + postPerPage)
     .map(({id,image, symbol, current_price, total_volume, price_change_percentage_24h, market_cap})=> (
       <Link to={`/coin/${id}`} element={<CoinInfo />} key={id}>
@@ -29,15 +48,19 @@ const Coin = () => {
       </Link>
     ))
 
-    const pageCount = Math.ceil(coin.length / postPerPage);
+    const pageCount = Math.ceil(coins.length / postPerPage);
     const changePage = ({ selected }) => {
       setCurrentPage(selected);
       window.scrollTo(0, 0)
     };
 
+   
+
   return (
+    <div className="market-div">
   <div className='market-container'>
 <div className='container'>
+<Searchbar  type='text' placeholder='Search' onChange={handleChange}/>
       <div className="heading">
           <div className="">Market</div>
           <div className="hide-mobile">Coins</div>
@@ -70,7 +93,9 @@ const Coin = () => {
       } */}
 
   </div>
-  </div>)
+  </div>
+    </div>
+  )
   
 };
 

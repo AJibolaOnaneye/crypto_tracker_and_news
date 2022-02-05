@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-// import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import  Logo  from '../assets/Dc-logo.png'
 
 function Navbar() {
@@ -41,7 +41,8 @@ function Navbar() {
             <i className={click ? <FaTimes /> : <FaBars className='hamb-color' />} />
           </div> */}
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            {/* <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}
+           {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>

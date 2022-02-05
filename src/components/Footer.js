@@ -4,7 +4,8 @@ import  Logo  from '../assets/Dc-logo.png';
 import './Footer.css'
 
 const Footer = () => {
-  return <div className="footer-container">
+  return <div className="footer-div">
+   <div className="footer-container">
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
@@ -58,6 +59,7 @@ const Footer = () => {
         </div>
       </section>
       </div>
+  </div>
 
 };
 

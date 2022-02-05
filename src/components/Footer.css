@@ -1,3 +1,6 @@
+.footer-div {
+  margin-top: 10rem;
+}
 .footer-container {
   /* background-color: #0000;
     padding: 4rem 0 2rem 0;
@@ -13,7 +16,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px;
+
   justify-content: space-evenly;
   position: fixed;
   left: 0;

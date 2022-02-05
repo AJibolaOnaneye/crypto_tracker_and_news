@@ -7,7 +7,7 @@ import "./Blog.css";
 
 const Blog = () => {
   const [blog, setBlog] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const [postPerPage] = useState(20);
 
   const url = `https://coinpaprika1.p.rapidapi.com/exchanges`;
